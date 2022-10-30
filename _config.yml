@@ -28,7 +28,7 @@ search: true
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
-permalink: /:categories/:title/
+permalink: /:categorias/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -59,7 +59,7 @@ plugins:
 
 author:
   name   : "Pippo Ramos"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/me-cartoon.jpg"
   bio    : "Antropólogo y Científico de datos especializado en NLP, CV y MLOps"
   links:
     - label: "Website"
@@ -70,7 +70,7 @@ author:
       url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/pippo-sci"
 
 footer:
   links:
@@ -79,7 +79,7 @@ footer:
       url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/pippo-sci"
 
 defaults:
   # _posts
@@ -103,7 +103,7 @@ defaults:
 
 category_archive:
   type: liquid
-  path: /categories/
+  path: /categorias/
 tag_archive:
   type: liquid
   path: /tags/
