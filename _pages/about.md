@@ -3,6 +3,12 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+## Antropólogo y Científico de Datos
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+Usar el poder de la curiosidad para desentrañar el comportamiento humano.
+
+Usar el poder de los datos, la computación y la estadística para la investigación y la productividad.
+
+## Fanático de la Inteligencia Artificial
+
+Como fan de los análisis textuales y linguísticos, no pude sino fascinarme por los algoritmos capacez de enseñarle lenguaje humano a un computador y de ahí ayudarme a automatizar las partes más tediosas del análisis textual, o aumentar el poder de análisis para hacer lo que un ejercito de analístas no podrían hacer en años de manera manual.
