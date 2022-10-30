@@ -58,7 +58,7 @@ plugins:
 
 author:
   name   : "Pippo Ramos"
-  avatar : "/assets/images/me-cartoon.jpg"
+  avatar : "/assets/images/me-cartoon.jpeg"
   bio    : "Antropólogo y Científico de datos especializado en NLP, CV y MLOps"
   links:
     - label: "Website"
