@@ -5,5 +5,7 @@ main:
     url: /categorias/
   - title: "Tags"
     url: /tags/
-  - title: "About"
+  - title: "Sobre esta web"
     url: /about/
+  - title: "Sobre el Autor"
+    url: /autor/
