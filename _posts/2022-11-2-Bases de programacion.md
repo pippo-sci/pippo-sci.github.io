@@ -53,20 +53,20 @@ Ya vimos que para programar basta con algun editor de texto. Pero además de eso
 
 O puedes installar una distribución diferente llamada Anaconda, que además instalara IDEs, entornos de ejecución y las librerías más comunes para análisis de datos. Recomiendo bajar esta  [versión aquí](#).
 
-## comencemos a programar
+## Comencemos a programar
 
 Sin embargo, la mayoría de los computadores ya cuentan con interpretes instalados. Sin ir más lejos el navegador en que estas leyendo este texto esta interpretando un lenguaje de marcado (HTML), de estilo (CSS) y de programación (Javascript). Juguemos con este último.
 
 Si estas usando Chrome para ver esta página, has click con el botón derecho del ratón en el cualquier parte del sitio. Del menú que se despliega has click en `inspecionar`. Ahora se abrira una sub-ventana que te mostrará la estructura del sitio en HTML. 
 
-![Consola](".\assets\images\primer script1.png")
+![Consola]("\assets\images\primer script1.png")
 
 Ahora, en la sub-ventana, dale click a la pestaña que dice `Consola`. Ahí veras un simbolo ">" y una línea parpadeante lista para recibir instrucciones.
 
 Escribe la instrucción:
-
+```Javascript
 alert("Hola mundo");
-
+```
 Reemplaza "Hola mundo" por lo que quieras escribir (Hola mundo es el primer programa tradicional de todo programador, pero yo te ofrezco en cambio la libertad). Recuerda consevar las comillas y el punto y coma al final de la línea.
 
 Dale enter y ve que ocurre.
