@@ -1,5 +1,5 @@
 ---
-title: Qué vas a encontrar en este blog
+title: Programar, lo que nadie te cuenta
 excerpt_separator: "<!--more-->"
 categories:
   - Conceptos Básicos
