@@ -14,7 +14,7 @@ La mayoría de la gente interactua con un computador a través de programas o so
 
 Sin embargo, programar te abre una ventana directa a aprovechar el poder computacional por tí mismo, y si eres suficientemente creativo, tu únicos límites serán los de las [leyes computacionales](#).
 
-> Programar se siente como tener super poderes
+> Programar se siente como hacer magia
 
 ### Ventajas de programar, pero sobre todo de analizar datos programando
 
@@ -76,7 +76,7 @@ La mayoría de los computadores ya cuentan con interpretes instalados. Sin ir m�
 
 Si estas usando Chrome para ver esta página, has click con el botón derecho del ratón en el cualquier parte del sitio. Del menú que se despliega has click en `inspecionar`. Ahora se abrirá una sub-ventana que te mostrará la estructura del sitio en HTML. 
 
-![Consola]("/assets/images/primer script1.png")
+![Consola](/assets/images/primer script1.png)
 
 Ahora, en la sub-ventana, dale click a la pestaña que dice `Consola`. Ahí veras un simbolo ">" y una línea parpadeante lista para recibir instrucciones.
 
