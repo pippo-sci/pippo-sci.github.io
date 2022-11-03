@@ -54,7 +54,7 @@ Otras diferencias entre lenguajes de programación según diferentes funcionalid
 Una diferencia importante con un lenguaje natural (como el español), es que el de programación no tiene espacio para `ambigüedades`. Por ejemplo la frase:
 
 "El viejo miró al niño con un telescopio"🐻
-{: .notice}
+{: .notice--warning}
 
 Esta frase es ambigüa ya que puede interpretarse como que un viejo miró a un niño usando un telescopio o que el niño tenía un telescopio.
 
@@ -66,7 +66,7 @@ Programar es entonces escribir texto usando las convensiones de un lenguaje en p
 
 Hay procesadores de texto especialemente diseñados para programar, que te ayudan a seguir las convenciones del lenguaje que vas a utilizar e incluso te autocompletan o sugieren texto, así como señalar posibles errores. Además hay programas especializados para escribir, compilar y ejecutar tus script, así como ayudarte a detectar errores (o bugs). Estos últimos se llaman IDE´s.
 
-Ademas del procesador de texto y el interprete,  muchas veces se se empaquetan todas estas cosas en una distribución. Por ejemplo, en los tutoriales usaremos Python, que puedes descargar en su versión vainilla [página aquí](#) o puedes instalar una distribución diferente llamada Anaconda, que además instalara IDEs, entornos de ejecución y las librerías más comunes para análisis de datos. Recomiendo bajar esta [versión aquí](#).
+Ademas del procesador de texto y el interprete,  muchas veces se se empaquetan todas estas cosas en una distribución. Por ejemplo, en los tutoriales usaremos Python, que puedes descargar en su versión vainilla [aquí](#) o puedes instalar una distribución diferente llamada Anaconda, que además instalara IDEs, entornos de ejecución y las librerías más comunes para análisis de datos. Recomiendo bajar esta [versión aquí](#).
 
 ## Comencemos a programar - Mini tutoriales (sin necesidad de instalar nada)
 
@@ -82,18 +82,19 @@ Ahora, en la sub-ventana, dale click a la pestaña que dice `Consola`. Ahí vera
 
 Escribe la instrucción:
 
-```Javascript
-
+```js
 alert("Hola mundo");
-
 ```
+
+
 Reemplaza "Hola mundo" por lo que quieras escribir (Hola mundo es tradicionalemente el primer programa de todo programador, pero yo te ofrezco la libertad creativa). Recuerda conservar las comillas y el punto y coma al final de la línea.
 
 Dale enter y ve que ocurre.
 
 Ok, spoiler alert. Una nueva ventana mostrando tu mensaje se ha abierto. Dale Ok para cerrar y ya está. Has ejecutado tu primera línea de código en Javascript.
 
-Este codigo se ha ejecutado localmente, es decir, solo para ti, no has hackeado la pagina web. Sin embargo, no es muy distinto a lo que se hacia para hackear en los primero anos de internet donde era facil escribir codigo en un foro en vez de escribir un comentario, es codigo se ejecutaba en cada computador que visitaba esa pagina.{: .notice}
+Este codigo se ha ejecutado localmente, es decir, solo para tí, no has hackeado la pagina web. Sin embargo, no es muy distinto a lo que se hacia para hackear en los primero anos de internet donde era facil escribir codigo en un foro en vez de escribir un comentario, es codigo se ejecutaba en cada computador que visitaba esa página.
+{: .notice--info}
 
 ### Automatizando tu trabajo
 
@@ -103,32 +104,35 @@ Hagamos la prueba. Si estas usando Windows 10 o superior,  Presiona las teclas `
 
 Una terminal de fondo azulado se abrirá. La terminal es muy útil sino la has usado antes. Te permite copiar archivos, crear carpetas incluso conectarte a internet a través de comandos. En Windows también puede hacer eso a través del cmd (command display), pero este no soporta scripts.
 
+
 Nuestro objetivo es crear una serie de carpetas y copiar un archivo dentro de ellas. Esta tarea puede tomar mucho tiempo si lo tenemos que hacer manualmente, asi que vale la pena que lo hagamos programando.
 
 Lo primero que haremos será ejecutar un comando para cambiar de carpeta. Por defecto PowerShell inicia en la capeta de usuario, debemos cambiar a la carpeta de "Documentos". Para ello escribe:
 
-```
+```powershell
 cd Documentos
 ```
 cd es un comando que significa `c`hange `d`irectory (cambiar directorio en ingles), y luego le damos el nombre de la capeta que queremos abrir dentro del directorio que estamos actualmente. (Si queremos volver a la carpeta anterior solo debemos escribir `cd ..`)
 
 Si queremos saber que carpetas hay en nuestra nueva ubicación, podemos ejecutar el comando `dir`. La terminal nos entregara una lista de las carpetas y archivos.
 
+![powershell](/assets/images/powersheel1.png)
+
 El siguiente paso es crear una carpeta donde vamos a trabajar. Para ello escribe:
 
-```
+```powershell
 mkdir pwtutorial
 ```
 
 Ejecuta el comando `dir` para segurarnos que la carpeta fue creada y luego entra a la carpeta en ella:
 
-```
+```powershell
 cd pwtutorial
 ```
 
 Una vez aquí podemos crear un archivo de texto para eso vamos a escribir un texto (siempre entre comillas, para que el computador sepa que es un texto y no un comando) y luego lo vamos a sacar (output) con el signo ">" hacia un archivo de texto que llamaremos 'test' (puedes copiar y pegar en tu PowerShell este comando, solo ten en consideración que en futuro nunca correr o copiar comandos o un script que no entiendas):
 
-```
+```powershell
 "Este es mi primer archivo" > test.txt
 ```
 
@@ -136,7 +140,7 @@ Busca la carpeta en tu computador como lo harías regularmente en el explorador 
 
 El último paso antes de comenzar con la magia es copiar el archivo de texto a la nueva carpeta. Para eso crearemos una nueva carpeta "carpeta1"  y usamos el comando `cp "archivo a copiar" "carpeta de destino"`.
 
-```
+```powershell
 cp test.txt carpeta1
 ```
 Ya sabemos como cambiar, crear y copiar carpetas y archivos. Es hora de automatizarlo. 
@@ -149,8 +153,13 @@ Luego que el contador está definido podemos abrir llaves para decir que tareas 
 
 Si ponemos todo junto nos queda la siguiente operación:
 
-```
-for ($contador=2;$contador -le 20;$contador++){$nombreCarpeta="carpeta"+$contador; mkdir $nombreCarpeta; cp test.txt $nombreCarpeta}
+```powershell
+for ($contador=2;$contador -le 20;$contador++)
+{
+  $nombreCarpeta="carpeta"+$contador;
+  mkdir $nombreCarpeta;
+  cp test.txt $nombreCarpeta
+}
 ```
 Ejecutamos y ya está, trabajo hecho. Lo mejor es que si queremos hacerlo por 100 carpetas no hay diferencia, solo cambiamos el número máximo de nuestro contador. También podemos introducir nuevas variables o crear/modificar el archivo de texto para que tenga contenido diferente. Podríamos incluso usar comandos para extraer al fecha actual y nombrar nuestros archivos usando la fecha, etc, etc.
 
