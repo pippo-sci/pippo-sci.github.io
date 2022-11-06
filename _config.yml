@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Ciencia de Datos para Científicos Sociales. Programacion, Machine Learning e 
   Inteligencia Artificial para potenciar analisis para las ciencias sociales
 twitter_username: username
-github_username: username
+github_username: pipo-sci
 minimal_mistakes_skin: dark
 search: true
 
@@ -107,3 +107,9 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+analytics:
+  provider: "google"
+  google:
+    tracking_id: "G-BF4LH3N1NG"
+    anonymize_ip: false # default
