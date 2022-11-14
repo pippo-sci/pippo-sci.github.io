@@ -16,10 +16,10 @@ Sin embargo, programar te abre una ventana directa a aprovechar el poder computa
 
 > Programar se siente como hacer magia
 
-### Ventajas de programar, pero sobre todo de analizar datos programando
+### Ventajas de programar, pero sobre todo, de analizar datos programando
 
 - Nos entrega mucha mayor versatilidad y control que usar aplicaciones con GUI (interfases gráficas de usuario, por sus siglas en inglés). Quizás al comienzo no es tan intuitivo como arrastrar iconos por la pantalla, pero es mucho más poderoso. 
-- Te permite utilizar los recursos de tu computador de manera más eficiente. Todo esos gráficos utilizan memoria que vas a querer usar mejor en tu análisis. Hay un límite máximo para tus filas en Excel, si tienes más datos que eso, aunque tengas memoria disponible, solo te queda trabajar programando.
+- Te permite utilizar los recursos de tu computador de manera más eficiente. Todo esos gráficos utilizan memoria que vas a querer usar mejor en tu análisis. Ademas hay un límite máximo para tus filas en Excel, si tienes más datos que eso, aunque tengas memoria disponible, solo te queda trabajar programando.
 - Tienes un registro. Cada paso en tu análisis es un comando en tu script. Lo que te permite corregir errores o hacer modificaciones fácilmente.
 - Es repetible, lo que no solo es bueno para la transparencia de tu análisis y mantener los principios científicos, sino que además te permite automatizar el proceso o reciclar pasos para un nuevo análisis.
 - Es muy rápido para trabajar con muchos datos y tareas en lote.
