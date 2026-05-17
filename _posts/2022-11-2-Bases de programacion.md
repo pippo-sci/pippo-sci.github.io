@@ -147,9 +147,13 @@ Ya sabemos como cambiar, crear y copiar carpetas y archivos. Es hora de automati
 
 Crearemos 20 carpetas y copiaremos nuestro archivo dentro de ellas. Usando un `loop`, un repetidor. 
 
-El loop `for` es común a muchos lenguajes de programación, se puede traducir como "Por cada vuelta has esto ...". Para usarlo primero llamamos a `for`, luego pasamos entre paréntesis un contador. Creamos una variable (es decir una entidad cuyo valor va a cambiar, variar) usando el signo `$` y un nombre, en nuestro caso lo llamaremos `contador`. Como ya creamos la carpeta "1", iniciaremos nuestro $contador en 2. En una segunda operación definiremos una condición que de ser verdadera, el loop ejecutará una vuelta. En nuestro caso que el sea $contador menor o igual (-le, por less or equal) a 20. Finalmente le diremos a nuestro $contador que se modifique a sí mismo en cada vuelta y aumente su valor en 1. Hay varias formas de hacer eso, pero la mas breve es diciendo `$contador++`.
+El loop `for` es común a muchos lenguajes de programación, se puede traducir como "Por cada repetición has esto ...". Para usarlo: 
+Primero escribimos `for`, luego pasamos entre paréntesis 3 operaciones (separadas por punto y coma):
+- Crear un contador. Creamos una variable (es decir una entidad cuyo valor va a cambiar, variar, cada repetición) usando el signo `$` y dandole un nombre, en nuestro caso lo llamaremos `$contador`. Como ya creamos la carpeta "1", iniciaremos nuestro `$contador` en 2 (`$contador=2`). 
+- En una segunda operación, definiremos una condición que determina si se debe genera una nueva repetición. Mientras la condición sea verdadera, el loop se ejecutará, si es false, se dentendrá. En nuestro caso que el sea `$contador` deber menor o igual (`-le`, por less or equal) a 20. 
+- Finalmente le diremos a nuestro `$contador` que se modifique a sí mismo en cada repetición y aumente su valor en 1. Hay varias formas de hacer eso, pero la mas breve es diciendo `$contador++`.
 
-Luego que el contador está definido podemos abrir llaves para decir que tareas queremos que se ejecuten cada vez que el contador cambie. La primera será definir el nombre de la carpeta. Ya que ocuparemos este nombre más de una vez, vale la pena guardarlo en una variable, la llamaremos `$nombreCarpeta` y le asignaremos la palabra "carpeta" concatenando (sumar dos textos produce que estos se junten) con el valor del $contador. Luego crearemos la carpeta con el $nombreCarpeta y luego copiaremos el archivo a la carpeta. Nota que como el valor del $contador es diferente en cada repetición, por lo que el $nombreCarpeta será diferente.
+Luego que el contador está definido podemos abrir llaves dentro de las cuales definiremos las tareas queremos que se ejecuten cada repetición. La primera será definir el nombre de la carpeta. Ya que ocuparemos este nombre más de una vez, vale la pena guardarlo en una variable, la llamaremos `$nombreCarpeta` y le asignaremos la palabra "carpeta" concatenando (sumar dos textos produce que estos se junten) con el valor del `$contador`. Luego crearemos la carpeta con el `$nombreCarpeta` y luego copiaremos el archivo a la carpeta. Nota que como el valor del `$contador` es diferente en cada repetición, el $nombreCarpeta será diferente.
 
 Si ponemos todo junto nos queda la siguiente operación:
 
@@ -163,23 +167,28 @@ for ($contador=2;$contador -le 20;$contador++)
 ```
 Ejecutamos y ya está, trabajo hecho. Lo mejor es que si queremos hacerlo por 100 carpetas no hay diferencia, solo cambiamos el número máximo de nuestro contador. También podemos introducir nuevas variables o crear/modificar el archivo de texto para que tenga contenido diferente. Podríamos incluso usar comandos para extraer la fecha actual y nombrar nuestros archivos usando la fecha, etc, etc.
 
-El último paso es convertir ese comando en una script que podemos reutilizar desde cualquier carpeta. Para ello crea un archivo de texto, usando PowerShell o cualquier otro método, copia el loop que definimos arriba y guárdalo con una terminación ".ps1". Para ejecutar tu script haz clic con el botón derecho del ratón y selecciona la opción "Ejecutar con Powershell".
+El último paso es convertir ese comando en una script que podemos reutilizar desde cualquier carpeta. Para ello:
+- crea un archivo de texto, usando PowerShell o cualquier otro método, 
+- copia el loop que definimos arriba dentro del archivo de texto
+- guárdalo con una terminación ".ps1" en vez de "txt". Y listo.
 
-[Si quieres saber que más puede hacer Powershell cliquea aquí](#)
+Para ejecutar tu script haz clic con el botón derecho del ratón y selecciona la opción "Ejecutar con Powershell".
 
-## Librerías, repositorios y la documentación
+[Si quieres saber que más puede hacer Powershell cliquea aquí](https://learn.microsoft.com/es-es/powershell/)
 
-Una parte muy importante de los lenguajes de programación, es que tienen funcionalidades estándar para ahorrarnos tiempo. Además estas funcionalidades se pueden extender mediante el uso de `librerías`. Las librerías no es más que código escrito por otros sobre el que tú puedes trabajar para crear tu propia funcionalidades.
+## Paquetes, repositorios y la documentación
 
-> Considera que si tu programa utiliza una librería estas creando una dependencia. Eso significa que quien quiera utilizar tu programa deberá instalar esa dependencia también para que esta funcione. 
+Una parte muy importante de los lenguajes de programación, es que tienen funcionalidades estándar para ahorrarnos tiempo. Además estas funcionalidades se pueden extender mediante el uso de `Paquetes` o bibliotecas (libraries). Los paquetes no es más que código escrito por otros sobre el que tú puedes trabajar para crear tu propia funcionalidades.
 
-Alguna vez tuve que mezclar la tecnología de un navegador web, con las funcionalidades de Photoshop y de un scanner para completar la información de una tabla y crear un archivo de Excel. Cada una de estas funcionalidades estaba en librerías diferentes que pude mezclar en un solo script. Eso se sintió muy poderoso.
+> Considera que si tu programa utiliza una Paquetes estas creando una dependencia. Eso significa que quien quiera utilizar tu programa deberá instalar esa dependencia también para que esta funcione. 
+
+Alguna vez tuve que mezclar la tecnología de un navegador web, con las funcionalidades de Photoshop y de un scanner para completar la información de una tabla y crear un archivo de Excel. Cada una de estas funcionalidades estaba en Paquetes diferentes que pude mezclar en un solo script. Eso se sintió muy poderoso.
 
 > Un elemento central a la filosofía de programar es no repetirse a uno mismo, ni reescribir código que ya está escrito. Por eso se dice que construimos sobre el trabajo de otros.
 
-Para conservar todo este código de manera ordenada es que existen `repositorios` de donde se pueden descargar e instalar librerías de manera segura. Por ejemplo, Python utiliza la librería PIP para baja otras librerías. Si usas Conda o Anaconda el comando `conda install nombre-libreria` te permite descargarlas de manera igual de fácil.
+Para conservar todo este código de manera ordenada es que existen `repositorios` de donde se pueden descargar e instalar paquetes de manera segura. Por ejemplo, Python utiliza la el adminsitrador de paquetes PIP para baja otros paquetes. Si usas Conda o Anaconda el comando `conda install nombre-Paquetes` te permite descargarlos de manera igual de fácil.
 
-No todos tenemos una memoria infinita (Lee más al respecto en el artículo de [Las leyes (y límites) de la computación](#)) para recordar los detalles de cada funcionalidad y sus requerimientos, así que lo programadores están constantemente revisando la documentación de los lenguajes de programación o de las librerías que utilizan.
+No todos tenemos una memoria infinita (Lee más al respecto en el artículo de [Las leyes (y límites) de la computación](#)) para recordar los detalles de cada funcionalidad y sus requerimientos, así que lo programadores están constantemente revisando la documentación de los lenguajes de programación o de las paquetes que utilizan.
 
 Cuando recién estaba aprendiendo, muchos tutoriales y cursos te enseñan un par de estas funcionalidades sin explicarte de dónde salen o mostrarle la lista de todas las opciones y eso era muy frustrante...
 
@@ -196,7 +205,6 @@ Ahora que ya sabemos estos conceptos te puede ser más fácil embarcarse en algu
 🚩Advertencia: Varios de los mejores recursos están en inglés. Y esto es importante. A pesar de que los hablantes de español somos casi el 8% de los usuarios de internet, solo un 4% de las páginas está en español (por lo que este blog es una humilde contribución a ese espacio), mientras que un 60% está en inglés. Saber inglés no solo es útil para programar, también te da acceso a un montón de tutoriales e información. El cyber espacio es al menos 15 veces más grande en inglés, es más probable que encuentres lo que buscas si eres capaz de navegar en más de un idioma.
 {: .notice--danger}
 
-- [Coursera](#)
 - [Udemy](#)
 - [Free Code Camp](https://www.freecodecamp.org/espanol/)
 - [Project Odin](https://www.theodinproject.com/paths)
