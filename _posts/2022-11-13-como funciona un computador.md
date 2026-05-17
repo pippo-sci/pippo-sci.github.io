@@ -9,7 +9,7 @@ tags:
 
 > Conoce a tu enemigo
 
-¿Cómo es que una máquina que solo entiende electricidad puede reproducir música, calcular rutas o reconocer tu cara? La respuesta está en varias capas de abstracción. Vamos a pelarlas de afuera hacia adentro: primero lo que ya conocés, luego de qué está hecho, después cómo funciona a nivel físico, y finalmente qué puede y qué no puede hacer.
+¿Cómo es que una máquina que solo entiende electricidad puede reproducir música, calcular rutas o reconocer tu cara? La respuesta está en varias capas de abstracción. Vamos a pelarlas de afuera hacia adentro: primero lo que ya conoces, luego de qué está hecho, después cómo funciona a nivel físico, y finalmente qué puede y qué no puede hacer.
 
 ## Las partes de un computador
 
